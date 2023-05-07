@@ -56,13 +56,23 @@ app.post('/registrar', async(req, res)=>{
 
 //checkProjectExists :Este módulo se usa comúnmente para crear, leer, actualizar, eliminar y renombrar un archivo
 //eliminar
-app.get('/borrar/:id',  (req, res) => {
+/*app.get('/borrar/:id',  (req, res) => {
     const id = req.params.id;
      mascota.collection('Mascotas').delete(id);
     res.redirect('/mascotas');
-  });
+  });*/
 
+
+ app.get("/borrar/:id", async (req, res) => {
+    let id = req.params.id
+    await mascota.findByIdAndDelete({"_id": id})
+    
+    res.redirect("/mascotas")
+})
 
 app.listen(PORT, ()=>{
     console.log('estoy en linea desde el puerto: '+ PORT);
 });
+
+
+
