@@ -22,20 +22,22 @@ exports.registrar=(req , res)=>{
 
 
 
-exports.registrarNueva= async(req, res)=>{
+exports.registrarNueva= (req, res)=>{
 
     const nuevaMascota = new mascota({ 
-    _id:req.body.idMascota,
+    _id:req.body._id,
     nombre:req.body.nombreMacota,
     raza:req.body.razaMacota,
     edad:req.body.edadMacota,
     });
 
-    const registrarNueva = nuevaMascota.save();
+    nuevaMascota.save();
+    //const registrarNueva = nuevaMascota.save();
 
-    let listaMascotas = await mascota.find();
 
-    res.redirect('mascotas')
+    //let listaMascotas = await mascota.find();
+
+    res.redirect('/api/v1/mascotas')
 };
 
 
