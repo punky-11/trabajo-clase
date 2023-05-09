@@ -1,10 +1,6 @@
 const mongoose = require('mongoose')
 
-const uri ='mongodb+srv://usuario:ontraseña@adsiprueva.treym02.mongodb.net/Mascotas?retryWrites=true&w=majority';
-const parametros ={
-    usuario: process.env.DATOS_USUARIO,
-    contraseña: process.env.DATOS_CONTRA,
-    db:process.env.DATOS_DATA
-}
+const uri =`mongodb+srv://${process.env.DATOS_USER}:${process.env.DATOS_CONTRA}@adsiprueva.treym02.mongodb.net/${process.env.DATOS_DATA}?retryWrites=true&w=majority`;
 
-mongoose.connect(uri, parametros,{ useNewUrlParser: true });
+
+mongoose.connect(uri,{ useNewUrlParser: true });

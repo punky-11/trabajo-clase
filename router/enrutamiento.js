@@ -4,8 +4,8 @@ const router =express.Router();
 
 
 router.get('/mascotas',rutaMascota.mascotas);
-router.get('/mascota1',rutaMascota.registrar);
-router.post('/mascota',rutaMascota.registrarNueva);
+router.get('/mascota',rutaMascota.registrar);
+router.post('/mascota1',rutaMascota.registrarNueva);
 
 
 
