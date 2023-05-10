@@ -40,5 +40,21 @@ exports.registrarNueva= (req, res)=>{
     res.redirect('/api/v1/mascotas')
 };
 
+//eliminar
 
+/*exports.borrar =   (req, res) => {
+    const id = req.params.id
 
+    mascota.findByIdAndDelete({"_id": id})
+    
+    res.redirect("/api/v1/mascotas")
+
+}*/
+
+exports.borrar =  async(req, res) => {
+    const id = req.params.id
+    await mascota.findByIdAndDelete({"_id": id});
+    
+    res.redirect("/api/v1/mascotas")
+
+} 

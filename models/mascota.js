@@ -7,7 +7,7 @@ const registrarMAscota = require('../config/conectionMongoose')
  const SchemaMascota = new mongoose.Schema({
     //di
     _id:{
-    type: Object,
+    type: Number,
     min:0,
     max:1000,
     required:true

@@ -33,7 +33,7 @@
             <%mascota.forEach(function(elemento){%>
                 <tr>
                     <td>
-                        <%=elemento._id%>
+                        <%=elemento.id%>
                     </td>
                     <td>
                         <%=elemento.nombre%>
@@ -45,10 +45,12 @@
                         <%=elemento.edad%>
                     </td>
                     <td>
-                        <button type="button" onclick="" data-bs-toggle="modal"  data-bs-target="#myModal" class="btn btn-dark">actualizar</button>                          
-                          <a href="borrar/<%= elemento.id %>" class="btn btn-dark" role="button">borrar</a>
-                      
-                       
+
+                      <button type="button" onclick="" data-bs-toggle="modal"  data-bs-target="#myModal" class="btn btn-dark">actualizar</button> 
+
+                      <a href="borrar/<%= elemento._id %>" class="btn btn-dark" role="button">borrar</a>
+                     
+                    
 
                     </td>
                 </tr>

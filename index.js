@@ -25,12 +25,13 @@ const PORT= process.env.PORT ;
 
 
 
- app.get("/borrar/:id", async (req, res) => {
+/*app.get("/borrar/:id", async (req, res) => {
     let id = req.params.id
     await mascota.findByIdAndDelete({"_id": id})
     
-    res.redirect("mascotas")
-})
+    res.redirect("/mascotas")
+})*/
+
 
 
 
