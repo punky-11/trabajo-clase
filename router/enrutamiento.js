@@ -9,16 +9,9 @@ router.get('/mascota',rutaMascota.registrar);
 //agrega
 router.post('/mascota1',rutaMascota.registrarNueva);
 //elimina
-router.get("/borrar/:id", rutaMascota.borrar);
-
-
-/*router.delete("/borrar/:_id", rutaMascota.borrar);*/
-
-/*router.delete('/delete/:_id',(req,res)=>{
-    const id = req.params._id;
-    mascota.findByIdAndDelete({"_id": id})
-    res.redirect("/api/v1/mascotas")
-})*/
+router.post("/borrar/:id", rutaMascota.borrar);
+//update
+router.post('/update/:id', rutaMascota.Update);
 
 
 

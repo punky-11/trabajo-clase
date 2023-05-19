@@ -10,20 +10,28 @@ const registrarMAscota = require('../config/conectionMongoose')
     type: Number,
     min:0,
     max:1000,
-    required:true
+    required:true,
+    //unique:true
     },
 //nombre
     nombre:{
+        default:"sin nombre",
         type:String,
-        required:true,
-        default:"sin nombre"
+        //required:false,
+       
     },
     //edad
-    edad:String,
+    edad:{type:String,
+        default:"nn"
+
+    },
 //raza
     raza:{
+        default:"nn",
         type:String,
-        required:true
+        //required:false,
+        
+
     }
  });
 
