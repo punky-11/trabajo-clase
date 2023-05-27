@@ -29,6 +29,7 @@ exports.registrarNueva= (req, res)=>{
     nombre:req.body.nombreMacota,
     raza:req.body.razaMacota,
     edad:req.body.edadMacota,
+    
     });
 
     nuevaMascota.save();

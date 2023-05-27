@@ -4,12 +4,16 @@ const express = require('express');
 const app = express();
 const path=require('path');
 const morgan=require('morgan');
+//subir archivos
+//const formidable = require('express-formidable');
 
 //coasaq que no queremos subir 
 const dotenv =require('dotenv')
 
 dotenv.config();
-
+//conexion para los archibos
+//app.use(formidable);
+//app.use(formidable.parse({ MediaKeySession:true }));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname,'views'));
@@ -25,12 +29,7 @@ const PORT= process.env.PORT ;
 
 
 
-/*app.get("/borrar/:id", async (req, res) => {
-    let id = req.params.id
-    await mascota.findByIdAndDelete({"_id": id})
-    
-    res.redirect("/mascotas")
-})*/
+
 
 
 
